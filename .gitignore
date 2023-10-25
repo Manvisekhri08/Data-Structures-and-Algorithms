@@ -2,3 +2,14 @@
 .lh/.lhignore
 *.json
 Essential C++ Concepts/a.out
+*.yml
+*.plist
+Essential C++ Concepts/pointers.dSYM/Contents/Resources/DWARF/pointers
+Essential C++ Concepts/array-basic
+Essential C++ Concepts/array-basic.dSYM/Contents/Resources/DWARF/array-basic
+Essential C++ Concepts/pointers
+Essential C++ Concepts/structure
+Essential C++ Concepts/structure.dSYM/Contents/Resources/DWARF/structure
+*.understanding recursion-1
+*.dSYM
+*.understanding recursion-2
