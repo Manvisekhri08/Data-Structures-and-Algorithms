@@ -14,3 +14,4 @@ int main() {
 }
 
 // op :- 123
+// here first the recursion call is made then printing is done. printing is done at returning time
