@@ -3,7 +3,7 @@ package Recursion;
 import java.util.Scanner;
 
 public class SumOfnNaturalNumbers {
-    
+
     // USING RECURSION
     // int Rsum(int n) {
     //     if(n == 0) {
@@ -33,5 +33,6 @@ public class SumOfnNaturalNumbers {
         Integer userNumber = myObj.nextInt();
         SumOfnNaturalNumbers rec = new SumOfnNaturalNumbers();
         System.out.println(rec.Fsum(userNumber));
+        myObj.close();
     }
 }
