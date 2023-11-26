@@ -3,6 +3,16 @@ package ArraysRepresentation;
 import java.util.Scanner;
 
 public class LinearSearch {
+    int linearSearch(int key, int[] A) {
+        int i;
+        for (i = 0; i < A.length; i++) {
+            if (key == A[i]) {
+                return i;
+            } 
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int i, key, size;
         Scanner scanner = new Scanner(System.in);
@@ -19,20 +29,13 @@ public class LinearSearch {
 
         System.out.print("Enter the key to search: ");
         key = scanner.nextInt();
-
-        boolean found = false;
-        for (i = 0; i < A.length; i++) {
-            if (key == A[i]) {
-                System.out.print("Key found at index: " + i);
-                found = true;
-                break; // No need to continue searching once the key is found
-            }
+        LinearSearch searcher = new LinearSearch();
+        int result = searcher.linearSearch(key, A);
+        if (result != -1) {
+            System.out.println("Key found at index: " + result);
+        } else {
+            System.out.println("Key not found in the array.");
         }
-
-        if (!found) {
-            System.out.print("-1");
-        }
-
         scanner.close();
     }
 }
