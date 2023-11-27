@@ -8,19 +8,19 @@ public class MissingElement {
         int diff = low - 0;
         for(int i =0; i<A.length;i++) {
             // single missing element
-             if(A[i] - i != diff) {
-                System.out.println("Missing Element is found which is:" +( diff + i));
-                break;
-            }
-            // multiple missing elements
-            // while(A[i] - i != diff) {
+            //  if(A[i] - i != diff) {
             //     System.out.println("Missing Element is found which is:" +( diff + i));
-            //     diff++;
+            //     break;
             // }
+            // multiple missing elements
+            while(A[i] - i != diff) {
+                System.out.println("Missing Element is found which is:" +( diff + i));
+                diff++;
+            }
         }
     }
      public static void main(String[] args) {
-        int i = 0, j = 0, k = 0, size, size2;
+        int i = 0, size;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the size of the array 1: ");
         size = scanner.nextInt();
