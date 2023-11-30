@@ -24,6 +24,22 @@ public class PairSumK {
             pair.add(num);
         }
     }
+    //sorted array
+    void pairSumSortArray(int[] A, int k) {
+        int i = 0; 
+        int j = A.length - 1;
+        while(i < j) {
+            if(A[i] + A[j] == k) {
+                 System.out.println("Pair of sum equal to "+ k + "are: " + "{ " + A[i] + "," + A[j] + " }" );
+                 i++;
+                 j--;
+            } else if(A[i] + A[j] > k) {
+                j--;
+            } else {
+                i++;
+            }
+        }
+    }
     public static void main(String[] args) {
         int i, size, k;
         Scanner scanner = new Scanner(System.in);
@@ -37,7 +53,7 @@ public class PairSumK {
         System.out.print("Enter the sum: ");
         k = scanner.nextInt();
         PairSumK sumK = new PairSumK();
-        sumK.pairSumKHashing(A, k);
+        sumK.pairSumSortArray(A, k);
         scanner.close();
     }
 }
