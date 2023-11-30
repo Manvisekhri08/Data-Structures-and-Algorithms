@@ -23,6 +23,18 @@ public class MergedArrays {
         return C;
     }
 
+    int[] merge2(int[] A, int m, int[] B, int n) {
+        int i = m-1, j = n-1, k = (m+n)-1;
+        while(j >= 0) {
+            if(i>=0 && A[i] > B[j]) {
+                A[k--] = A[i--];
+            } else {
+                A[k--] = B[j--];
+            }
+        }
+        return A;
+    }
+
     public static void main(String[] args) {
         int i = 0, j = 0, k = 0, size, size2;
         Scanner scanner = new Scanner(System.in);
@@ -41,7 +53,7 @@ public class MergedArrays {
             B[j] = scanner.nextInt();
         }
         MergedArrays mergeArrays = new MergedArrays();
-        int[] C = mergeArrays.merge(A, B);
+        int[] C = mergeArrays.merge2(A,size, B,size2);
         for (k = 0; k < C.length; k++) {
             System.out.println(C[k]);
         }
