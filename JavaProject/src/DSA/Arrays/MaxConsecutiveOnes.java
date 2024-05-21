@@ -10,6 +10,8 @@ public class MaxConsecutiveOnes {
          * We will have another variable max which maintain count of max 1's
          * if we counter 1, we increase count and max = count;
          * If we counter 0, then count resets to 0
+         * TC:- O(N)
+         * SC:- O(1)
          */
         int count = 0,  max = 0;
         for(int i = 0 ; i<arr.length;i++) {
